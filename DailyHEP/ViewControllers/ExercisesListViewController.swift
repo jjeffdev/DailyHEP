@@ -12,6 +12,7 @@ class ExercisesListViewController: UICollectionViewController {
 //    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
     
     var dataSource: DataSource!
+    var exercises: [DailyExercises] = DailyExercises.sampleData
     
 
     override func viewDidLoad() {
@@ -28,13 +29,13 @@ class ExercisesListViewController: UICollectionViewController {
             cell.contentConfiguration = contentConfiguration
         }*/
         
-        dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
+        dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: DailyExercises.ID) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
         
         var snapshot = Snapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(DailyExercises.sampleData.map { $0.exercise })
+        snapshot.appendItems(exercises.map { $0.id })
         dataSource.apply(snapshot)
         
         collectionView.dataSource = dataSource

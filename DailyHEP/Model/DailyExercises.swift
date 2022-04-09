@@ -7,13 +7,24 @@
 
 import Foundation
 
-struct DailyExercises {
+struct DailyExercises: Identifiable {
+    var id: String = UUID().uuidString
     var exercise: String
     var dueByDate: Date
     var isComplete: Bool = false
     var notes: String? = nil
     
 }
+
+extension Array where Element == DailyExercises {
+    func indexOfExercises(with id: DailyExercises.ID) -> Self.Index {
+        guard let index = firstIndex(where: {$0.id == id}) else {
+            fatalError()
+        }
+        return index
+    }
+}
+
 
 #if DEBUG
 extension DailyExercises {

@@ -1,5 +1,5 @@
 //
-//  ExercisesVewController.swift
+//  ExercisesVewController+DataSource.swift
 //  DailyHEP
 //
 //  Created by jeff on 3/19/22.
@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 extension ExercisesListViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, DailyExercises.ID>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, DailyExercises.ID>
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: String) {
-        let dailyExercises = DailyExercises.sampleData[indexPath.item]
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: DailyExercises.ID) {
+        let dailyExercises = exercises[indexPath.item]
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = dailyExercises.exercise
         contentConfiguration.secondaryText = dailyExercises.dueByDate.dayAndTimeText
@@ -37,5 +37,15 @@ extension ExercisesListViewController {
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
         
+    }
+    
+    func exercise(for id: DailyExercises.ID) -> DailyExercises {
+        let index = exercises.indexOfExercises(with: id)
+        return exercises[index]
+    }
+    
+    func update(_ exercise: DailyExercises, with id: DailyExercises.ID) {
+        let index = exercises.indexOfExercises(with: id)
+        exercises[index] = exercise
     }
 }
