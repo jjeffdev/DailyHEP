@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EA209B9E27E1069B0023DDCE /* RepeatDailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA209B9D27E1069B0023DDCE /* RepeatDailyExercise.swift */; };
+		EA3E3CFE2810B3FC00B98070 /* ExerciseDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */; };
+		EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */; };
+		EA3E3D022819AF8800B98070 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */; };
+		EA3E3D052819DEE300B98070 /* DetailViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */; };
 		EAB55A5F27E28CD400A2B592 /* Date+Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */; };
-		EAB55A6427E6D0B300A2B592 /* ExercisesListVewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A6327E6D0B300A2B592 /* ExercisesListVewController+DataSource.swift */; };
+		EAB55A6427E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */; };
 		EAB55A6627E6E83300A2B592 /* UIColor+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */; };
 		EAC34C0A27D956BA0063C4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC34C0927D956BA0063C4BB /* AppDelegate.swift */; };
 		EAC34C0C27D956BA0063C4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC34C0B27D956BA0063C4BB /* SceneDelegate.swift */; };
@@ -22,8 +26,12 @@
 
 /* Begin PBXFileReference section */
 		EA209B9D27E1069B0023DDCE /* RepeatDailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDailyExercise.swift; sourceTree = "<group>"; };
+		EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDoneButton.swift; sourceTree = "<group>"; };
+		EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListViewController+Action.swift"; sourceTree = "<group>"; };
+		EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Row.swift"; sourceTree = "<group>"; };
 		EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Exercises.swift"; sourceTree = "<group>"; };
-		EAB55A6327E6D0B300A2B592 /* ExercisesListVewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListVewController+DataSource.swift"; sourceTree = "<group>"; };
+		EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListViewController+DataSource.swift"; sourceTree = "<group>"; };
 		EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Today.swift"; sourceTree = "<group>"; };
 		EAC34C0627D956BA0063C4BB /* DailyHEP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyHEP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC34C0927D956BA0063C4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,11 +63,22 @@
 			path = Repeat;
 			sourceTree = "<group>";
 		};
+		EA3E3D032819DEB800B98070 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */,
+				EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 		EAB55A6227E6D09700A2B592 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				EAC34C0D27D956BA0063C4BB /* ExercisesListViewController.swift */,
-				EAB55A6327E6D0B300A2B592 /* ExercisesListVewController+DataSource.swift */,
+				EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */,
+				EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */,
+				EA3E3D032819DEB800B98070 /* DetailViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +121,7 @@
 				EAC34C1E27DAF2170063C4BB /* DailyExercises.swift */,
 				EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */,
 				EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */,
+				EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,8 +199,12 @@
 			files = (
 				EAC34C0E27D956BA0063C4BB /* ExercisesListViewController.swift in Sources */,
 				EAB55A5F27E28CD400A2B592 /* Date+Exercises.swift in Sources */,
+				EA3E3D052819DEE300B98070 /* DetailViewController+Row.swift in Sources */,
+				EA3E3CFE2810B3FC00B98070 /* ExerciseDoneButton.swift in Sources */,
 				EA209B9E27E1069B0023DDCE /* RepeatDailyExercise.swift in Sources */,
-				EAB55A6427E6D0B300A2B592 /* ExercisesListVewController+DataSource.swift in Sources */,
+				EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */,
+				EAB55A6427E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift in Sources */,
+				EA3E3D022819AF8800B98070 /* ExerciseViewController.swift in Sources */,
 				EAC34C1F27DAF2170063C4BB /* DailyExercises.swift in Sources */,
 				EAC34C0A27D956BA0063C4BB /* AppDelegate.swift in Sources */,
 				EAC34C0C27D956BA0063C4BB /* SceneDelegate.swift in Sources */,

@@ -33,10 +33,7 @@ class ExercisesListViewController: UICollectionViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
         
-        var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems(exercises.map { $0.id })
-        dataSource.apply(snapshot)
+        updateSnapshot()
         
         collectionView.dataSource = dataSource
         
@@ -49,6 +46,12 @@ class ExercisesListViewController: UICollectionViewController {
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
     
-   
+
+    
+//    func updateTest(_ exercise: DailyExercises, with id: DailyExercises.ID) {
+//        let index = exercises.indexOfExercises(with: id)
+//        exercises[index] = exercise
+//    }
+    
 }
 
