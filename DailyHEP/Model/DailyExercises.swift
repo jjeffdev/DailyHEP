@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct DailyExercises: Identifiable {
+struct DailyExercises: Equatable, Identifiable {
     var id: String = UUID().uuidString
-    var exercise: String
+    var exerciseName: String
     var dueByDate: Date
     var isComplete: Bool = false
     var notes: String? = nil
@@ -30,9 +30,9 @@ extension Array where Element == DailyExercises {
 extension DailyExercises {
     static var sampleData: [DailyExercises] {
         [
-            DailyExercises(exercise: "Elbow Flexion", dueByDate: Date().addingTimeInterval(800.0), notes: "Arm straight down, then touch your shoulder"),
-            DailyExercises(exercise: "Shoulder Extension", dueByDate: Date().addingTimeInterval(14000.0), notes: "Arm straight down, then slowly rach back"),
-            DailyExercises(exercise: "Wrist Rotations", dueByDate: Date().addingTimeInterval(60000.0), notes: "Elbow bent with arms on table, turn palm up then turn palm down")
+            DailyExercises(exerciseName: "Elbow Flexion", dueByDate: Date().addingTimeInterval(800.0), notes: "Arm straight down, then touch your shoulder"),
+            DailyExercises(exerciseName: "Shoulder Extension", dueByDate: Date().addingTimeInterval(14000.0), notes: "Arm straight down, then slowly rach back"),
+            DailyExercises(exerciseName: "Wrist Rotations", dueByDate: Date().addingTimeInterval(60000.0), notes: "Elbow bent with arms on table, turn palm up then turn palm down")
         ]
     }
 }

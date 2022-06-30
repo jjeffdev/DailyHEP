@@ -38,12 +38,27 @@ class ExercisesListViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
         
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        let id = exercises[indexPath.item].id
+        showDetail(for: id)
+        return false
+    }
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
         listConfiguration.showsSeparators = true
         listConfiguration.backgroundColor = .orange
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
+    }
+    
+    func showDetail(for id: DailyExercises.ID) {
+        let exercises = exercise(for: id)
+        let viewController = ExerciseViewController(exercise: exercises) { [weak self] exercise in
+            self?.update(exercise, with: id)
+            self?.updateSnapshot(reloading: [exercise.id])
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 

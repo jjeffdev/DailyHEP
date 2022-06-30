@@ -23,7 +23,7 @@ extension ExercisesListViewController {
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: DailyExercises.ID) {
         let dailyExercises = exercises[indexPath.item]
         var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = dailyExercises.exercise
+        contentConfiguration.text = dailyExercises.exerciseName
         contentConfiguration.secondaryText = dailyExercises.dueByDate.dayAndTimeText
         contentConfiguration.secondaryTextProperties.font = UIFont.preferredFont(forTextStyle: .caption1)
         cell.contentConfiguration = contentConfiguration

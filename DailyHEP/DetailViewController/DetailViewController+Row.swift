@@ -10,10 +10,15 @@ import UIKit
 
 extension ExerciseViewController {
     enum Row: Hashable {
+        case header(String)
         case viewDate
         case viewNote
         case viewTime
         case viewTitle
+        case editText(String)
+        case editDate(Date)
+        case editNote(String?)
+        
     
     
         var imageName: String? {

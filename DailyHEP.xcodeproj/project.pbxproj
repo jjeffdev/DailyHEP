@@ -12,6 +12,13 @@
 		EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */; };
 		EA3E3D022819AF8800B98070 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */; };
 		EA3E3D052819DEE300B98070 /* DetailViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */; };
+		EAA16DCA2838901A00C43780 /* DetailViewController+Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DC92838901A00C43780 /* DetailViewController+Sections.swift */; };
+		EAA16DCC283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DCB283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift */; };
+		EAA16DCF283F305200C43780 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DCE283F305200C43780 /* UIView+PinnedSubview.swift */; };
+		EAA16DD1284008E700C43780 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DD0284008E700C43780 /* TextFieldContentView.swift */; };
+		EAA16DD32841D24400C43780 /* UICOntentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DD22841D24400C43780 /* UICOntentConfiguration+Stateless.swift */; };
+		EAA16DD5284C5F2D00C43780 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DD4284C5F2D00C43780 /* TextViewContentView.swift */; };
+		EAA16DD7284DBB0700C43780 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA16DD6284DBB0700C43780 /* DatePickerContentView.swift */; };
 		EAB55A5F27E28CD400A2B592 /* Date+Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */; };
 		EAB55A6427E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */; };
 		EAB55A6627E6E83300A2B592 /* UIColor+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */; };
@@ -30,6 +37,13 @@
 		EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListViewController+Action.swift"; sourceTree = "<group>"; };
 		EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Row.swift"; sourceTree = "<group>"; };
+		EAA16DC92838901A00C43780 /* DetailViewController+Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Sections.swift"; sourceTree = "<group>"; };
+		EAA16DCB283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
+		EAA16DCE283F305200C43780 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
+		EAA16DD0284008E700C43780 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
+		EAA16DD22841D24400C43780 /* UICOntentConfiguration+Stateless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICOntentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
+		EAA16DD4284C5F2D00C43780 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
+		EAA16DD6284DBB0700C43780 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
 		EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Exercises.swift"; sourceTree = "<group>"; };
 		EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListViewController+DataSource.swift"; sourceTree = "<group>"; };
 		EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Today.swift"; sourceTree = "<group>"; };
@@ -68,8 +82,22 @@
 			children = (
 				EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */,
 				EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */,
+				EAA16DC92838901A00C43780 /* DetailViewController+Sections.swift */,
+				EAA16DCB283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift */,
 			);
 			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		EAA16DCD283F301F00C43780 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				EAA16DCE283F305200C43780 /* UIView+PinnedSubview.swift */,
+				EAA16DD0284008E700C43780 /* TextFieldContentView.swift */,
+				EAA16DD22841D24400C43780 /* UICOntentConfiguration+Stateless.swift */,
+				EAA16DD4284C5F2D00C43780 /* TextViewContentView.swift */,
+				EAA16DD6284DBB0700C43780 /* DatePickerContentView.swift */,
+			);
+			path = ContentViews;
 			sourceTree = "<group>";
 		};
 		EAB55A6227E6D09700A2B592 /* ViewControllers */ = {
@@ -78,7 +106,6 @@
 				EAC34C0D27D956BA0063C4BB /* ExercisesListViewController.swift */,
 				EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */,
 				EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */,
-				EA3E3D032819DEB800B98070 /* DetailViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,6 +132,8 @@
 				EAC34C1D27DAF1860063C4BB /* Model */,
 				EAC34C0927D956BA0063C4BB /* AppDelegate.swift */,
 				EAC34C0B27D956BA0063C4BB /* SceneDelegate.swift */,
+				EAA16DCD283F301F00C43780 /* ContentViews */,
+				EA3E3D032819DEB800B98070 /* DetailViewController */,
 				EAB55A6227E6D09700A2B592 /* ViewControllers */,
 				EA209B9F27E106A50023DDCE /* Repeat */,
 				EAC34C0F27D956BA0063C4BB /* Main.storyboard */,
@@ -201,13 +230,20 @@
 				EAB55A5F27E28CD400A2B592 /* Date+Exercises.swift in Sources */,
 				EA3E3D052819DEE300B98070 /* DetailViewController+Row.swift in Sources */,
 				EA3E3CFE2810B3FC00B98070 /* ExerciseDoneButton.swift in Sources */,
+				EAA16DD1284008E700C43780 /* TextFieldContentView.swift in Sources */,
 				EA209B9E27E1069B0023DDCE /* RepeatDailyExercise.swift in Sources */,
+				EAA16DD5284C5F2D00C43780 /* TextViewContentView.swift in Sources */,
+				EAA16DCC283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift in Sources */,
+				EAA16DD32841D24400C43780 /* UICOntentConfiguration+Stateless.swift in Sources */,
 				EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */,
 				EAB55A6427E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift in Sources */,
 				EA3E3D022819AF8800B98070 /* ExerciseViewController.swift in Sources */,
+				EAA16DCF283F305200C43780 /* UIView+PinnedSubview.swift in Sources */,
+				EAA16DCA2838901A00C43780 /* DetailViewController+Sections.swift in Sources */,
 				EAC34C1F27DAF2170063C4BB /* DailyExercises.swift in Sources */,
 				EAC34C0A27D956BA0063C4BB /* AppDelegate.swift in Sources */,
 				EAC34C0C27D956BA0063C4BB /* SceneDelegate.swift in Sources */,
+				EAA16DD7284DBB0700C43780 /* DatePickerContentView.swift in Sources */,
 				EAB55A6627E6E83300A2B592 /* UIColor+Today.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
