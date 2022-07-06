@@ -19,6 +19,7 @@ class ExerciseViewController: UICollectionViewController {
     }
     var workingExercise: DailyExercises
     var onChange: (DailyExercises) -> Void
+    var isAddingNewExercise = false
     private var dataSource: DataSource!
     
     init(exercise: DailyExercises, onChange: @escaping (DailyExercises) -> Void) {
@@ -54,7 +55,12 @@ class ExerciseViewController: UICollectionViewController {
         if editing {
             prepareForEditing()
         } else {
-            prepareForViewing()
+            if !isAddingNewExercise {
+                
+                prepareForViewing()
+            } else {
+                onChange(workingExercise)
+            }
         }
     }
     

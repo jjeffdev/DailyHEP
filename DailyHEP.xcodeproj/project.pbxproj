@@ -80,7 +80,6 @@
 		EA3E3D032819DEB800B98070 /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */,
 				EA3E3D042819DEE300B98070 /* DetailViewController+Row.swift */,
 				EAA16DC92838901A00C43780 /* DetailViewController+Sections.swift */,
 				EAA16DCB283DDDE700C43780 /* ExerciseViewController+CellConfiguration.swift */,
@@ -103,6 +102,7 @@
 		EAB55A6227E6D09700A2B592 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA3E3D012819AF8800B98070 /* ExerciseViewController.swift */,
 				EAC34C0D27D956BA0063C4BB /* ExercisesListViewController.swift */,
 				EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */,
 				EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */,
