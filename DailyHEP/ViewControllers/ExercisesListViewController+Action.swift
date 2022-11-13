@@ -21,12 +21,19 @@ extension ExercisesListViewController {
     @objc func didPressAddButton(_ sender:UIBarButtonItem) {
         let exercise = DailyExercises(exerciseName: "", dueByDate: Date.now)
         let viewController = ExerciseViewController(exercise: exercise) { [weak self] exercise in
-            
+            self?.add(exercise)
+            self?.updateSnapshot()
+            self?.dismiss(animated: true)
         }
         viewController.isAddingNewExercise = true
         viewController.setEditing(true, animated: false)
         viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didCancelAdd(_:)))
         let navigationController = UINavigationController(rootViewController: viewController)
         present(navigationController, animated: true)
+    }
+    
+    @objc func didChangeListStyle(_ sender: UISegmentedControl) {
+        listStyle = ExerciseListStyle(rawValue: sender.selectedSegmentIndex) ?? .today
+        updateSnapshot()
     }
 }

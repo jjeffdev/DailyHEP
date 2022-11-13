@@ -51,6 +51,15 @@ extension ExercisesListViewController {
         
     }
     
+    func add(_ exercise: DailyExercises) {
+        exercises.append(exercise)
+    }
+    
+    func deleteExercise(with id: DailyExercises.ID) {
+        let index = exercises.indexOfExercises(with: id)
+        exercises.remove(at: index)
+    }
+    
     func exercise(for id: DailyExercises.ID) -> DailyExercises {
         let index = exercises.indexOfExercises(with: id)
         return exercises[index]
@@ -71,10 +80,11 @@ extension ExercisesListViewController {
         
     }
     
-    func updateSnapshot(reloading ids: [DailyExercises.ID] = []) {
+    func updateSnapshot(reloading idsThatChanged: [DailyExercises.ID] = []) {
+        let ids = idsThatChanged.filter { id in filteredReminders.contains(where: {$0.id == id}) }
         var snapshot = Snapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(exercises.map { $0.id })
+        snapshot.appendItems(filteredReminders.map { $0.id })
         if !ids.isEmpty {
             snapshot.reloadItems(ids)
         }

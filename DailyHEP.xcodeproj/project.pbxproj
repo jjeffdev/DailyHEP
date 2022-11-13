@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA10EF6828AEB2F100D49118 /* ExerciseListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10EF6728AEB2F000D49118 /* ExerciseListStyle.swift */; };
+		EA10EF6A28BF156600D49118 /* ProgressHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10EF6928BF156600D49118 /* ProgressHeaderVIew.swift */; };
 		EA209B9E27E1069B0023DDCE /* RepeatDailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA209B9D27E1069B0023DDCE /* RepeatDailyExercise.swift */; };
 		EA3E3CFE2810B3FC00B98070 /* ExerciseDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */; };
 		EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA10EF6728AEB2F000D49118 /* ExerciseListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListStyle.swift; sourceTree = "<group>"; };
+		EA10EF6928BF156600D49118 /* ProgressHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderVIew.swift; sourceTree = "<group>"; };
 		EA209B9D27E1069B0023DDCE /* RepeatDailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDailyExercise.swift; sourceTree = "<group>"; };
 		EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDoneButton.swift; sourceTree = "<group>"; };
 		EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesListViewController+Action.swift"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				EAC34C0D27D956BA0063C4BB /* ExercisesListViewController.swift */,
 				EAB55A6327E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift */,
 				EA3E3CFF2811999200B98070 /* ExercisesListViewController+Action.swift */,
+				EA10EF6928BF156600D49118 /* ProgressHeaderVIew.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				EAB55A5E27E28CD400A2B592 /* Date+Exercises.swift */,
 				EAB55A6527E6E83300A2B592 /* UIColor+Today.swift */,
 				EA3E3CFD2810B3FC00B98070 /* ExerciseDoneButton.swift */,
+				EA10EF6728AEB2F000D49118 /* ExerciseListStyle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,9 +243,11 @@
 				EAA16DD32841D24400C43780 /* UICOntentConfiguration+Stateless.swift in Sources */,
 				EA3E3D002811999200B98070 /* ExercisesListViewController+Action.swift in Sources */,
 				EAB55A6427E6D0B300A2B592 /* ExercisesListViewController+DataSource.swift in Sources */,
+				EA10EF6828AEB2F100D49118 /* ExerciseListStyle.swift in Sources */,
 				EA3E3D022819AF8800B98070 /* ExerciseViewController.swift in Sources */,
 				EAA16DCF283F305200C43780 /* UIView+PinnedSubview.swift in Sources */,
 				EAA16DCA2838901A00C43780 /* DetailViewController+Sections.swift in Sources */,
+				EA10EF6A28BF156600D49118 /* ProgressHeaderVIew.swift in Sources */,
 				EAC34C1F27DAF2170063C4BB /* DailyExercises.swift in Sources */,
 				EAC34C0A27D956BA0063C4BB /* AppDelegate.swift in Sources */,
 				EAC34C0C27D956BA0063C4BB /* SceneDelegate.swift in Sources */,
