@@ -20,10 +20,13 @@ class ExercisesListViewController: UICollectionViewController {
     let listStyleSegmentedControl = UISegmentedControl(items: [ExerciseListStyle.today.name, ExerciseListStyle.future.name, ExerciseListStyle.all.name])
     var headerView: ProgressHeaderView?
     
+    
         
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.backgroundColor = .blue
         
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -49,6 +52,9 @@ class ExercisesListViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
         
         let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+        dataSource.supplementaryViewProvider = {supplementaryView, elementKind, IndexPath in
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: IndexPath)
+        }
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_:)))
         addButton.accessibilityLabel = NSLocalizedString("Add reminder", comment: "Add button accessibility label")
@@ -63,6 +69,7 @@ class ExercisesListViewController: UICollectionViewController {
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = true
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
         listConfiguration.backgroundColor = .orange
@@ -96,13 +103,8 @@ class ExercisesListViewController: UICollectionViewController {
 //        exercises[index] = exercise
 //    }
     
-    private func supplementaryRegistrationHandler(progressView: ProgressHeaderView, element: String, indexPath: IndexPath) {
+    private func supplementaryRegistrationHandler(progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath) {
         headerView = progressView
     }
-    
-    func supplementaryRegistrationHeader(progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath) {
-        headerView = progressView
-    }
-    
 }
 
